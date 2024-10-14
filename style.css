@@ -23,7 +23,7 @@ body {
 .main .box {
     height: 644px;
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.69;
     position: absolute;
     top: 0;
     background-color: black;
@@ -52,7 +52,7 @@ nav button {
 
 .hero {
     font-family: 'Martel Sans', sans-serif;
-    height: calc(100% - 62px);
+    height: calc(100% - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,12 +85,20 @@ nav button {
 .separation {
     height: 7px;
     background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
 }
 
 .btn {
     padding: 3px 8px;
-    font-weight: bold;
-    background-color:white;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.342);
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+
+
 }
 
 .btn-red {
@@ -99,12 +107,19 @@ nav button {
     padding: 3px 24px;
     font-size: 20px;
     border-radius: 4px;
+    font-weight: 400;
+
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
 
 }
 
 .hero buttons {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 16px;
 }
@@ -112,17 +127,10 @@ nav button {
 .main input {
     padding: 7px 101px 8px 14px;
     color: white;
-    font-size: 900;
     font-size: 12px;
     border-radius: 4px;
-    background-color: rgba(23,23,23,0.7);
-    border: 1px solid rgba(23,23,23,0.3);
-}
-
-.btn-red-sm {
-    background-color: red;
-    color: white;
-
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(23, 23, 23, 0.3);
 }
 
 .hero-buttons {
@@ -151,8 +159,6 @@ nav button {
     align-items: center;
 }
 
-
-
 .secImg {
     position: relative;
 }
@@ -177,6 +183,144 @@ section.first>div {
 }
 
 section.first>div :nth-child(1) {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: bolder;
+}
+
+section.first>div :nth-child(2) {
+    font-size: 18px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.faq {
+    background-color: black;
+    color: white;
+    padding: 34px;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    color: white;
+}
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+.faqbox {
+    display: flex;
+    background-color: #2d2d2d;
+    padding: 24px;
+    font-size: 24px;
+    max-width: 60vw;
+    margin: 32px auto;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+footer {
+    color: white;
+    margin: auto;
+    max-width: 60vw;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    nav {
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 305px;
+
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer-item {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer a {
+        font-size: 14px;
+        color: white;
+    }
+
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
 }
